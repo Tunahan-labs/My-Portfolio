@@ -17,10 +17,15 @@
       <ul>
         <li class="nav-item1"><a href="#about">About Me</a></li>
         <li class="nav-item2"><a href="#projects">Projects</a></li>
-        <li class="nav-item3"><a href="#hire_me">Hire Me!</a></li>
         <li class="nav-item4"><a href="#contact">Contact Me!</a></li>
       </ul>
     </nav>
+    <label for="themeSelect">Theme</label>
+    <select id="themeSelect" class="btn">
+      <option value="system">System</option>
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+    </select>
   </header>
 
   <body>
@@ -56,11 +61,6 @@
         development and software engineering. I love creating innovative
         solutions and learning new technologies.
       </p>
-      <h3>My Favorite foods:</h3>
-      <ul>
-        <li><p>Pizza</p></li>
-        <li><p>Burger</p></li>
-      </ul>
       <h3>My Hobbies:</h3>
       <ol>
         <li><p>Tinkering with electronics</p></li>
@@ -106,79 +106,7 @@
       <h3>Project 1: Portfolio Website</h3>
       <p>A personal portfolio website to showcase my skills and projects.</p>
     </section>
-    <br />
     <hr />
-
-    <section id="hire_me">
-      <form action="#" method="post">
-        <h2>Hire me!</h2>
-        <fieldset>
-          <legend>Project Details</legend>
-          <label for="project_type" class="l1">Type of project:</label>
-          <select name="project_type" id="project_type" required>
-            <option value="" selected disabled>Choose project type</option>
-            <option value="website">Website</option>
-            <option value="web_app">Web App</option>
-            <option value="bug_fixes">Bug Fixes</option>
-            <option value="consultation">Consultation</option>
-          </select>
-          <label for="involved_tech">Involved tech:</label>
-          <br />
-          <label for="html">HTML</label>
-          <input type="checkbox" id="html" name="html" value="html" required />
-          <label for="css">CSS</label>
-          <input type="checkbox" id="css" name="css" value="css" required />
-          <label for="javascript">JavaScript</label>
-          <input
-            type="checkbox"
-            id="javascript"
-            name="javascript"
-            value="javascript"
-            required
-          />
-          <hr />
-          <label for="describe_project">Describe your project:</label>
-          <textarea
-            name="describe_project"
-            id="describe_project"
-            cols="30"
-            rows="10"
-            required
-            placeholder="Describe your project here..."
-          ></textarea>
-          <button type="submit" id="hire_me">Submit</button>
-        </fieldset>
-      </form>
-    </section>
-
-    <section id="budget_timeline">
-      <form action="#" method="post">
-        <h2>Budget & Timeline</h2>
-        <fieldset>
-          <legend>Budget & Timeline Details</legend>
-          <label for="budget">Budget (in USD):</label>
-          <input
-            type="number"
-            id="budget"
-            name="budget"
-            min="1"
-            max="1000000"
-            required
-            placeholder="ex: 1000"
-          />
-          <label for="timeline">Timeline:</label>
-          <br />
-          <label for="asap">ASAP</label>
-          <input type="radio" name="urgency" id="asap" value="asap" />
-          <label for="2_weeks">2 weeks</label>
-          <input type="radio" name="urgency" id="2_weeks" value="2_weeks" />
-          <label for="flexible">Flexible</label>
-          <input type="radio" name="urgency" id="flexible" value="flexible" />
-          <button type="submit" id="budget&timeline">Submit</button>
-        </fieldset>
-      </form>
-    </section>
-
     <section id="contact">
       <form action="#" method="post">
         <h2>Contact Me!</h2>
@@ -239,7 +167,6 @@
         </fieldset>
       </form>
     </section>
-
     <hr />
     <dl>
       <dt><h4>HTML:</h4></dt>
@@ -256,6 +183,7 @@
       </dd>
     </dl>
     <hr />
+    <button id="topBtn" class="top-btn" aria-label="Back to top">^</button>
     <footer>
       <p>&copy; Tunahan Kursun 2025</p>
     </footer>
