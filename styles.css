@@ -525,6 +525,7 @@ footer {
     --gray-600: #a0a0a0;
     --gray-700: #c0c0c0;
     --gray-800: #e0e0e0;
+    --white: #1e1e1e;
   }
 }
 
@@ -540,6 +541,7 @@ body.light {
   --gray-600: #4b5563;
   --gray-700: #374151;
   --gray-800: #1f2937;
+  --white: #ffffff;
 }
 body.dark {
   --bg: #121212;
