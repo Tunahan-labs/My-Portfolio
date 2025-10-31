@@ -20,7 +20,8 @@
         <li class="nav-item4"><a href="#contact">Contact Me!</a></li>
       </ul>
     </nav>
-    <label for="themeSelect">Theme</label>
+    <hr />
+    <h4 for="themeSelect">Theme</h4>
     <select id="themeSelect" class="btn">
       <option value="system">System</option>
       <option value="dark">Dark</option>
@@ -31,7 +32,7 @@
   <body>
     <img src="./assets/T_Logo.jpg" alt="My T Logo" height="300" width="300" />
 
-    <table border="1">
+    <table border="1" id="table1">
       <thead>
         <tr>
           <th>#</th>
@@ -130,7 +131,8 @@
           />
           <label for="number">Phone number:</label>
           <input
-            type="number"
+            type="tel"
+            pattern="[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}"
             name="number"
             id="number"
             placeholder="ex: xxx xxx xx xx"
@@ -146,7 +148,7 @@
             <option value="iceland">Iceland</option>
             <option value="united_states">United states</option>
           </select>
-          <label for="Company">Company:</label>
+          <label for="Company">Company (optional):</label>
           <input
             type="text"
             name="company"
@@ -167,21 +169,6 @@
         </fieldset>
       </form>
     </section>
-    <hr />
-    <dl>
-      <dt><h4>HTML:</h4></dt>
-      <dd>A markup language for creating web pages.</dd>
-      <dt><h4>CSS:</h4></dt>
-      <dd>
-        A style sheet language used for describing the presentation of a
-        document.
-      </dd>
-      <dt><h4>JavaScript:</h4></dt>
-      <dd>
-        A programming language commonly used in web development to create
-        interactive effects within web browsers.
-      </dd>
-    </dl>
     <hr />
     <button id="topBtn" class="top-btn" aria-label="Back to top">^</button>
     <footer>

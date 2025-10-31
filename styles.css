@@ -33,10 +33,16 @@ body {
 /* Typography */
 h1,
 h2,
-h3,
-h4 {
+h3 {
   color: var(--gray-800);
   margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+h4 {
+  color: var(--white);
+  margin-bottom: 0.75rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -181,7 +187,7 @@ legend {
 label {
   display: block;
   font-weight: 600;
-  color: var(--white);
+  color: var(--gray-800);
 }
 
 input,
@@ -202,23 +208,6 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* Checkbox and radio */
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  margin-right: 0.5rem;
-}
-
-label[for="html"],
-label[for="css"],
-label[for="javascript"],
-label[for="asap"],
-label[for="2_weeks"],
-label[for="flexible"] {
-  display: inline;
-  font-weight: 500;
-}
-
 /* Buttons */
 button {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -230,31 +219,6 @@ button {
   cursor: pointer;
   margin-top: 1rem;
   box-shadow: var(--shadow);
-}
-
-/* Definition lists */
-dl {
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: var(--shadow);
-  margin: 1.5rem 0;
-}
-
-dt {
-  font-weight: 700;
-  color: var(--primary);
-  margin-top: 1rem;
-}
-
-dt:first-child {
-  margin-top: 0;
-}
-
-dd {
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  color: var(--gray-600);
 }
 
 /* HR */
