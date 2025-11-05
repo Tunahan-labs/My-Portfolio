@@ -244,6 +244,43 @@ hr {
   margin: 2rem 0;
 }
 
+/* Project Gallery */
+#projectFilters {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#projectFilters button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
 /* Footer */
 footer {
   background: var(--gray-800);

@@ -104,3 +104,102 @@ window.onload = () => {
     }
   });
 };
+
+//submit form
+document.querySelector("form").addEventListener("submit", function (e) {
+  const form = e.target;
+
+  // Check if form is valid using built-in browser validation
+  if (form.checkValidity()) {
+    e.preventDefault(); // Prevent actual submission
+    alert("✅ Your message has been submitted successfully!");
+    form.reset(); // Optional: clear the form
+  }
+});
+
+//Showcase my projects on the projects section
+const projects = [
+  {
+    name: "To-Do List",
+    description: "A simple to-do list application to manage daily tasks.",
+    category: "web",
+    link: "https://github.com/Tunahan-labs",
+  },
+  {
+    name: "Stack Game",
+    description: "A fun and interactive stack game built with JavaScript.",
+    category: "game",
+    link: "https://github.com/Tunahan-labs",
+  },
+  {
+    name: "Image editor",
+    description:
+      "An image editing application with various filters and effects.",
+    category: "web",
+    link: "https://github.com/Tunahan-labs",
+  },
+  {
+    name: "Maze Game",
+    description: "A maze navigation game where players find their way out.",
+    category: "game",
+    link: "https://github.com/Tunahan-labs",
+  },
+  {
+    name: "Pong Game",
+    description: "A classic Pong game built with HTML5 Canvas.",
+    category: "game",
+    link: "https://github.com/Tunahan-labs",
+  },
+  {
+    name: "Calculator",
+    description: "A simple calculator application built with JavaScript.",
+    category: "web",
+    link: "https://github.com/Tunahan-labs",
+  },
+  {
+    name: "Notes",
+    description:
+      "A note-taking app that allows users to create and manage notes.",
+    category: "web",
+    link: "https://github.com/Tunahan-labs",
+  },
+  {
+    name: "Tic-Tac-Toe",
+    description: "A classic Tic-Tac-Toe game with a two-player mode.",
+    category: "game",
+    link: "https://github.com/Tunahan-labs",
+  },
+  {
+    name: "Hangman Game",
+    description: "A classic Hangman game built with HTML5 Canvas.",
+    category: "game",
+    link: "https://github.com/Tunahan-labs",
+  },
+];
+
+const gallery = document.getElementById("projectGallery");
+const buttons = document.querySelectorAll("#projectFilters button");
+
+function renderProjects(filter = "all") {
+  gallery.innerHTML = "";
+  const filtered =
+    filter === "all" ? projects : projects.filter((p) => p.category === filter);
+  filtered.forEach((project) => {
+    const card = document.createElement("div");
+    card.className = "project-card";
+    card.innerHTML = `
+      <h3>${project.name}</h3>
+      <p>${project.description}</p>
+      <a href="${project.link}" target="_blank">View Project</a>
+    `;
+    gallery.appendChild(card);
+  });
+}
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    renderProjects(btn.dataset.filter);
+  });
+});
+
+renderProjects();
