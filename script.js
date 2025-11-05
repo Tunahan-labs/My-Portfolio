@@ -53,10 +53,6 @@ topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-topBtn.style.position = "fixed";
-topBtn.style.bottom = "1rem";
-topBtn.style.right = "1rem";
-
 // Scroll animations
 const targets = document.querySelectorAll(
   "footer, hr, img, #table1, header, section, .reveal"
